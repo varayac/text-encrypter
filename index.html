@@ -1,10 +1,13 @@
+</html>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Encriptador de texto</title>
+   <title>Encriptador de Texto</title>
+   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
@@ -12,23 +15,40 @@
       <h1>a</h1>
    </header>
 
-   <main>
-      <div>
-         <textarea class="textIn" name="textIn" id="textIn" placeholder="Ingrese texto aquí"></textarea>
-      </div>
-      <div>
-         <img src="./assets/img/photo.svg" alt="Texto encriptado/desencriptado">
-      </div>
-      <div>
-         <button class="btn" id="encrypt">Encriptar</button>
-         <button class="btn" id="decrypt">Desencriptar</button>
-      </div>
+   <main class="main-container">
+      <!-- Seccion textArea -->
+      <section class="encrypter-section">
+         <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+         <div class="button-group">
+            <button class="btn" id="encryptBtn">Encriptar!</button>
+            <button class="btn" id="decryptBtn">Desencriptar!</button>
+         </div>
+      </section>
+
+      <!-- Seccion resultado -->
+      <section class="decrypter-section">
+         <!-- Imagen inicial -->
+         <div id="outputImage" class="output-image">
+            <div class="message-container">
+               <img src="./assets/img/photo.svg" alt="Sin mensaje" class="placeholder-img">
+               <p><strong>Ningún mensaje fue encontrado</strong></p>
+               <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+         </div>
+         <!-- Resultado -->
+         <div id="outputText" class="output-text hidden">
+            <p id="messageText"></p>
+            <p id="copyMessage" class="hidden">Texto copiado al portapapeles</p>
+            <button id="copyBtn" class="copy-btn hidden">Copiar</button>
+         </div>
+      </section>
    </main>
 
    <footer>
-      <p>Created by @varayac ©</p>
+      <p>&copy; 2024 Encriptador de Texto</p>
    </footer>
 
+   <script src="./assets/js/encrypter.js"></script>
 </body>
 
 </html>
